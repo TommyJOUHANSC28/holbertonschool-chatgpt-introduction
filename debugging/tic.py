@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def print_board(board):
     for row in board:
-        print(" | ".join(row))
-        print("-" * 5)
+        print(" | ".join(f"{cell:^3}" for cell in row))  # <-- juste cette ligne modifiée
+        print("-" * 11)
 
 def check_winner(board):
     for row in board:
